@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.hero {
+    padding: 78px 101px;
+    background-color: #FFFFFF;
+}
+
+.hero-main-title {
+    color: #111D15;
+    font-size: 39px;
+    font-weight: 700; /* Bold */
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-sub-title {
+    color: #111D15;
+    font-size: 15px;
+    font-weight: 400; /* Regular */
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+}
+
+.hero-description {
+    color: #4D4D4D;
+    font-size: 13.5px;
+    font-weight: 400; /* Regular */
+    line-height: 1.5;
+    margin-top: 0;
+}
