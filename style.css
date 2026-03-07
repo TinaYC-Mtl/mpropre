@@ -1,125 +1,279 @@
-body{
-font-family:'Be Vietnam Pro', sans-serif;
-color:#111D15;
-margin:0;
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container{
-width:1200px;
-margin:auto;
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: #111D15;
+    line-height: 1.5;
 }
 
-.navbar{
-padding:20px 0;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.nav-wrapper{
-display:flex;
-justify-content:space-between;
-align-items:center;
+.section-padding {
+    padding: 80px 0;
 }
 
-nav a{
-margin-left:25px;
-font-size:12px;
-text-decoration:none;
-color:#111D15;
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
 }
 
-nav a:hover{
-text-decoration:underline;
-color:#32D1E6;
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
+.grid-4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
 }
 
-.hero-small{
-font-size:15px;
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
 }
 
-h1{
-font-size:39px;
-font-weight:700;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.hero-desc{
-font-size:13.5px;
+/* Navbar */
+.navbar {
+    padding: 20px 0;
 }
 
-.primary-btn{
-background:#32D1E6;
-color:white;
-padding:12px 20px;
-border:none;
-font-size:12px;
-letter-spacing:1.5px;
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h2{
-font-size:33px;
-font-weight:600;
+.logo {
+    height: 40px;
 }
 
-.subtitle{
-font-size:15px;
-font-weight:600;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
-.service-cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+.nav-links a {
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
-.card h3{
-font-size:18px;
-font-weight:600;
+.nav-links a:hover {
+    text-decoration: underline;
 }
 
-.card p{
-font-size:12px;
+/* Buttons */
+.btn-primary, .btn-secondary, .p-btn {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.15em; /* 150% 字间距 */
+    padding: 12px 25px;
+    border: 1px solid #111D15;
+    background: transparent;
+    cursor: pointer;
 }
 
-.outline-btn{
-border:1px solid #111D15;
-background:none;
-padding:10px 18px;
-font-size:12px;
+.btn-primary:hover, .btn-secondary:hover {
+    color: #32D1E6;
+    border-color: #32D1E6;
 }
 
-.process{
-background:#32D1E6;
-color:white;
-padding:80px 0;
+/* Hero Section */
+.hero {
+    background: url('images/HeroImage.jpg') no-repeat center center/cover;
+    height: 438px;
+    display: flex;
+    align-items: center;
 }
 
-.process-cards{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
+.hero-subtext {
+    font-size: 15px;
+    font-weight: 400;
 }
 
-.process-price{
-font-size:24px;
+.hero h1 {
+    font-size: 39px;
+    font-weight: 700;
+    margin: 15px 0;
+    max-width: 600px;
 }
 
-.footer{
-background:#0f2c23;
-color:white;
-padding:60px 0;
+.hero-desc {
+    font-size: 13.5px;
+    margin-bottom: 25px;
+    max-width: 500px;
 }
 
-.footer-grid{
-display:grid;
-grid-template-columns:2fr 1fr 1fr 1fr;
+/* Typography Defaults */
+h2 {
+    font-size: 33px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
-.footer a{
-display:block;
-font-size:12px;
-margin-bottom:8px;
+.description {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Why Section Checkbox */
+.check-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.check-list li {
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Cards */
+.card h3, .special-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.card p, .special-card p {
+    font-size: 12px;
+}
+
+/* Process Section */
+.process {
+    background-color: #32D1E6; /* 示例蓝色背景 */
+    text-align: center;
+}
+
+.white-text {
+    color: #FFFFFF;
+}
+
+.p-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.p-step {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.p-price {
+    font-size: 24px;
+    color: #FFFFFF;
+    background: #32D1E6;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.p-desc {
+    font-size: 12px;
+    line-height: 2; /* 200% spacing */
+    margin-bottom: 15px;
+}
+
+/* Testimonials */
+.stars {
+    color: #FF9800;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.client-text h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.client-text .job, .review-msg {
+    font-size: 12px;
+}
+
+/* Contact Section */
+.find-us h3, .keep-touch h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.info-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.info-item p, form input, form textarea {
+    font-size: 12px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Footer */
+.footer {
+    background-color: #111D15;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.footer-col h5 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-col a {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 8px;
+    color: #ccc;
 }
